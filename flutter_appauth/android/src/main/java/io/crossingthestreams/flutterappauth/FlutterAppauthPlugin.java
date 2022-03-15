@@ -566,6 +566,7 @@ public class FlutterAppauthPlugin implements FlutterPlugin, MethodCallHandler, P
         responseMap.put("codeVerifier", authResponse.request.codeVerifier);
         responseMap.put("authorizationCode", authResponse.authorizationCode);
         responseMap.put("authorizationAdditionalParameters", authResponse.additionalParameters);
+        responseMap.put("state", authResponse.state);
         return responseMap;
     }
 

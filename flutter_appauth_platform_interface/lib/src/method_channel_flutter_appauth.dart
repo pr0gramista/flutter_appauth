@@ -25,7 +25,8 @@ class MethodChannelFlutterAppAuth extends FlutterAppAuthPlatform {
     return AuthorizationResponse(
         result['authorizationCode'],
         result['codeVerifier'],
-        result['authorizationAdditionalParameters']?.cast<String, dynamic>());
+        result['authorizationAdditionalParameters']?.cast<String, dynamic>(),
+        result["state"]);
   }
 
   @override

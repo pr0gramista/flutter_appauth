@@ -4,6 +4,7 @@ class AuthorizationResponse {
     this.authorizationCode,
     this.codeVerifier,
     this.authorizationAdditionalParameters,
+    this.state,
   );
 
   /// The authorization code.
@@ -14,4 +15,7 @@ class AuthorizationResponse {
 
   /// Additional parameters included in the response.
   final Map<String, dynamic>? authorizationAdditionalParameters;
+
+  /// The generated state parameter
+  final String state;
 }

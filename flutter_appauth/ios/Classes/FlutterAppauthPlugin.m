@@ -217,6 +217,7 @@ NSString *const END_SESSION_ERROR_MESSAGE_FORMAT = @"Failed to end session: %@";
                 [processedResponse setObject:authorizationResponse.additionalParameters forKey:@"authorizationAdditionalParameters"];
                 [processedResponse setObject:authorizationResponse.authorizationCode forKey:@"authorizationCode"];
                 [processedResponse setObject:authorizationResponse.request.codeVerifier forKey:@"codeVerifier"];
+                [processedResponse setObject:authorizationResponse.state forKey:@"state"];
                 result(processedResponse);
             } else {
                 [self finishWithError:AUTHORIZE_ERROR_CODE message:[self formatMessageWithError:AUTHORIZE_ERROR_MESSAGE_FORMAT error:error] result:result];
